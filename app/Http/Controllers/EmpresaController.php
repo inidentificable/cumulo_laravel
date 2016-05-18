@@ -1,0 +1,50 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Empresa;
+use App\Http\Requests;
+
+class EmpresaController extends Controller
+{
+    public function index()
+    {
+        $empresas = Empresa::all();
+        return view('empresa.todos', ['empresas' => $empresas->toArray()]);
+    }
+
+    public function show($id)
+    {
+        $empresa = Empresa::find($id);
+        if (!is_null($empresa))
+            return view('empresa.mostrar', ['empresa' => $empresa->toArray()]);
+        else
+            return response('no encontrado', 404);
+    }
+
+    public function create()
+    {
+        return view('empresa.formempresa');
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'rut' => 'required',
+            'nombre' => 'required',
+            'fecha_inicio_actividades' => 'required',
+            'fecha_ingreso_sistema' => 'required',
+            'telefono' => 'required',
+            'comuna' => 'required',
+            'ciudad' => 'required',
+            'direccion' => 'required',
+            'pais' => 'required',
+            'clasificacion' => 'required'
+        ]);
+
+        Empresa::create($request->all());
+        return redirect('/empresas');
+    }
+
+}
