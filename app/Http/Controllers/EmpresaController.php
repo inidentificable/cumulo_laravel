@@ -8,10 +8,14 @@ use App\Http\Requests;
 
 class EmpresaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $empresas = Empresa::all();
-        return view('empresa.todos', ['empresas' => $empresas->toArray()]);
+        return view('empresa.todos2', ['empresas' => $empresas->toArray()]);
     }
 
     public function show($id)

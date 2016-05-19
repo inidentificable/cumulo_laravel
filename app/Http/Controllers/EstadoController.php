@@ -8,6 +8,10 @@ use App\Http\Requests;
 
 class EstadoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $estados = Estado::all();

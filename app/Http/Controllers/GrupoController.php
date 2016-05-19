@@ -8,6 +8,10 @@ use App\Http\Requests;
 
 class GrupoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $grupos = Grupo::all();

@@ -8,6 +8,10 @@ use App\Http\Requests;
 
 class ProyectoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $proyectos = Proyecto::all();
