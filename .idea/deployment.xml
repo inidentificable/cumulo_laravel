@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="localCumuloLaravel">
+  <component name="PublishConfigData" serverName="cumulo_cl">
     <serverData>
+      <paths name="cumulo_cl">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="localCumuloLaravel">
         <serverdata>
           <mappings>
