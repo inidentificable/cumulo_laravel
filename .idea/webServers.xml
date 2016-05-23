@@ -2,13 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="10d98b83-6a43-4a41-a354-f8e35e37d5bd" name="cumulo_cl" url="http://www.cumulo.cl">
-        <fileTransfer host="cumulo.cl" port="21" rootFolder="/public_html" password="dffadf98dfc6df9bdf9edf9bdf93df92df9d" username="cumulocl">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" />
-          </advancedOptions>
-          <option name="port" value="21" />
-        </fileTransfer>
+      <webServer id="10d98b83-6a43-4a41-a354-f8e35e37d5bd" name="cumulo_cl" url="http://core.cumulo.cl">
+        <fileTransfer port="0" mountedRoot="Z:\public_html" accessType="MOUNT" />
       </webServer>
     </option>
   </component>
