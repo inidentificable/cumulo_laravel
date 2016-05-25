@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.personalizado')
 
-@section('title', 'Detalles Permiso')
+@section('titulo', 'Detalles Permiso')
 
-@section('sidebar')
+@section('barra-lateral')
     @parent
 
 @endsection
