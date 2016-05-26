@@ -11,7 +11,7 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="first-slide" src="/assets/imagenes/carr1.jpg" alt="First slide">
+                <img class="first-slide" src="/assets/imagenes/carr1.jpg" width="600" height="480" alt="First slide">
 
                 <div class="container">
                     <div class="carousel-caption">
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="second-slide" src="/assets/imagenes/carr2.jpg" alt="Second slide">
+                <img class="second-slide" src="/assets/imagenes/carr2.jpg" width="600" height="480" alt="Second slide">
 
                 <div class="container">
                     <div class="carousel-caption">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="third-slide" src="/assets/imagenes/carr3.jpg" alt="Third slide">
+                <img class="third-slide" src="/assets/imagenes/carr3.jpg" width="600" height="480" alt="Third slide">
 
                 <div class="container">
                     <div class="carousel-caption">

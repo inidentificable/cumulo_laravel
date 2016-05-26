@@ -99,30 +99,7 @@
                 <h1 class="page-header">@yield('titulo')</h1>
                 <div class="row placeholders">
                     @section('graficos')
-                        <div class="col-xs-6 col-sm-3 placeholder">
-                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                 width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                            <h4>Empresas</h4>
-                            <span class="text-muted">Something else</span>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 placeholder">
-                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                 width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                            <h4>Grupos</h4>
-                            <span class="text-muted">Something else</span>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 placeholder">
-                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                 width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                            <h4>Licitaciones</h4>
-                            <span class="text-muted">Something else</span>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 placeholder">
-                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                 width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                            <h4>Proyectos</h4>
-                            <span class="text-muted">Something else</span>
-                        </div>
+                        <canvas class="" style="opacity: 1;" id="sitemap" width="320" height="240"></canvas>
                     @show
                 </div>
 
@@ -140,6 +117,15 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 <script>window.jQuery || document.write('<script src="{{ asset('assets/js/jquery.min.js') }}"><\/script>')</script>
+
+<!-- Sirve para implementar los gráficos en javascript, requiere jquery - Libreria-->
+<script src="{{ asset('assets/js/arbor.js') }}"></script>
+<script src="{{ asset('assets/js/arbor-tween.js') }}"></script>
+<script src="{{ asset('assets/js/arbor-graphics.js') }}"></script>
+<!-- Sirve para implementar los gráficos en javascript, requiere jquery - Genera el diagrama-->
+<script src="{{ asset('assets/js/site.js') }}"></script>
+
+
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 <script src="{{ asset('assets/js/vendor/holder.min.js') }}"></script>

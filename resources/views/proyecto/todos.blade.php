@@ -68,4 +68,5 @@
         @endforeach
         </tbody>
     </table>
+    {!! $proyectos->links() !!}
 @endsection

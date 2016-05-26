@@ -44,4 +44,5 @@
         @endforeach
         </tbody>
     </table>
+    {!! $empresas->links() !!}
 @endsection

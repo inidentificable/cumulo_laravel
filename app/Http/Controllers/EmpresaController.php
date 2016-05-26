@@ -14,8 +14,8 @@ class EmpresaController extends Controller
     }
     public function index()
     {
-        $empresas = Empresa::all();
-        return view('empresa.todos', ['empresas' => $empresas->toArray()]);
+        $empresas = Empresa::paginate(10);
+        return view('empresa.todos', ['empresas' => $empresas]);
     }
 
     public function show($id)

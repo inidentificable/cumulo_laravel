@@ -35,4 +35,5 @@
         @endforeach
         </tbody>
     </table>
+    {!! $poermisos->links() !!}
 @endsection

@@ -38,4 +38,5 @@
         @endforeach
         </tbody>
     </table>
+    {!! $grupos->links() !!}
 @endsection

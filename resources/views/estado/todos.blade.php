@@ -34,4 +34,5 @@
         @endforeach
         </tbody>
     </table>
+    {!! $estados->links() !!}
 @endsection

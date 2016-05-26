@@ -14,8 +14,8 @@ class GrupoController extends Controller
     }
     public function index()
     {
-        $grupos = Grupo::all();
-        return view('grupo.todos', ['grupos' => $grupos->toArray()]);
+        $grupos = Grupo::paginate(10);
+        return view('grupo.todos', ['grupos' => $grupos]);
     }
 
     public function show($id)

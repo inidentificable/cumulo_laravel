@@ -14,8 +14,8 @@ class LicitacionController extends Controller
     }
     public function index()
     {
-        $licitacions = Licitacion::all();
-        return view('licitacion.todos', ['licitacions' => $licitacions->toArray()]);
+        $licitacions = Licitacion::paginate(10);
+        return view('licitacion.todos', ['licitacions' => $licitacions]);
     }
 
     public function show($id)

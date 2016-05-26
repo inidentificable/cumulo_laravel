@@ -14,8 +14,8 @@ class PermisoController extends Controller
     }
     public function index()
     {
-        $permisos = Permiso::all();
-        return view('permiso.todos', ['permisos' => $permisos->toArray()]);
+        $permisos = Permiso::paginate(10);
+        return view('permiso.todos', ['permisos' => $permisos]);
     }
 
     public function show($id)
