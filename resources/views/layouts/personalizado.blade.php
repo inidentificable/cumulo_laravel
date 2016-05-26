@@ -42,10 +42,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                @if (Auth::guest())
-                    <li><a href="{{ url('/login') }}">Ingresar</a></li>
-                    <li><a href="{{ url('/register') }}">Registrarse</a></li>
-                @else
+                @if (Auth::check())
                     <li><a href="{{ url('/home') }}">Inicio</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -56,6 +53,9 @@
                             <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Salir</a></li>
                         </ul>
                     </li>
+                @else
+                    <li><a href="{{ url('/login') }}">Ingresar</a></li>
+                    <li><a href="{{ url('/register') }}">Registrarse</a></li>
                 @endif
             </ul>
             <form class="navbar-form navbar-right">
@@ -68,7 +68,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-            @if (Auth::check())
+            @if ( Auth::check() )
             @section('barra-lateral')
                 <ul class="nav nav-sidebar">
                     <li class="active"><a href="#">Inicio<span class="sr-only">(current)</span></a></li>
@@ -95,10 +95,7 @@
             @endif
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            @if (Auth::guest())
-            @section('carrusel')
-            @show
-            @else
+            @if ( Auth::check() )
                 <h1 class="page-header">@yield('titulo')</h1>
                 <div class="row placeholders">
                     @section('graficos')
@@ -129,6 +126,9 @@
                     @show
                 </div>
 
+            @else
+            @section('carrusel')
+            @show
             @endif
             @yield('content')
         </div>

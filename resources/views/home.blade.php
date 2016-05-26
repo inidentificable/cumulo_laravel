@@ -1,4 +1,7 @@
 @extends('layouts.personalizado')
+
+@section('titulo', 'Home')
+
 @section('barra-lateral')
     @parent
 @endsection
