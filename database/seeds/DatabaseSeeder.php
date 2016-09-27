@@ -1,4 +1,4 @@
-<?php
+php A<?php
 
 use Illuminate\Database\Seeder;
 
@@ -18,5 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call(OfertaSeeder::class);
         $this->call(PermisoSeeder::class);
         $this->call(ProyectoSeeder::class);
+        $this->call(EmpresaEstadoSeeder::class);
+        $this->call(EmpresaEmpresaSeeder::class);
+        $this->call(ProductoSeeder::class);
     }
 }

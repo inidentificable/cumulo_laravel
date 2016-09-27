@@ -14,9 +14,9 @@ class CreateEmpresaEstadoPivotTable extends Migration
     {
         Schema::create('empresa_estado', function (Blueprint $table) {
             $table->integer('empresa_id')->unsigned()->index();
-            $table->foreign('empresa_id')->references('id')->on('empresa')->onDelete('cascade');
+            $table->foreign('empresa_id')->references('id')->on('empresas')->onDelete('cascade');
             $table->integer('estado_id')->unsigned()->index();
-            $table->foreign('estado_id')->references('id')->on('estado')->onDelete('cascade');
+            $table->foreign('estado_id')->references('id')->on('estados')->onDelete('cascade');
             $table->primary(['empresa_id', 'estado_id']);
         });
     }

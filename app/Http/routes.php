@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -27,6 +23,12 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
+
+    //Inicio - A diferencia del inicio tradicional de Laravel, obligo al usuario a logearse.
+    Route::get('/', [
+        'middleware' => 'auth',
+        'uses' => 'HomeController@index']);
+
     //Login usuario (Autogenerado Artisan)
     Route::get('/home', [
         'middleware' => 'auth',
@@ -37,6 +39,9 @@ Route::group(['middleware' => ['web']], function () {
     route::get('empresas', [
         'middleware' => 'auth',
         'uses' => 'EmpresaController@index']);
+    route::get('empresas/invitar', [
+        'middleware' => 'auth',
+        'uses' => 'EmpresaController@invitarEmpresas']);
     route::get('empresas/crear', [
         'middleware' => 'auth',
         'uses' => 'EmpresaController@create']);
@@ -46,6 +51,23 @@ Route::group(['middleware' => ['web']], function () {
     route::get('empresas/{id}', [
         'middleware' => 'auth',
         'uses' => 'EmpresaController@show']);
+    route::get('empresas/invitados/{id}', [
+        'middleware' => 'auth',
+        'uses' => 'EmpresaController@obtenerInvitados']);
+
+    //Mantenedor de productos
+    route::get('productos', [
+        'middleware' => 'auth',
+        'uses' => 'ProductoController@index']);
+    route::get('productos/crear', [
+        'middleware' => 'auth',
+        'uses' => 'ProductoController@create']);
+    route::post('productos/crear', [
+        'middleware' => 'auth',
+        'uses' => 'ProductoController@store']);
+    route::get('productos/{id}', [
+        'middleware' => 'auth',
+        'uses' => 'ProductoController@show']);
 
     //Mantenedor de estados
     route::get('estados', [

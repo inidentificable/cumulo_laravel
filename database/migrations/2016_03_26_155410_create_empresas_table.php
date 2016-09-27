@@ -24,6 +24,7 @@ class CreateEmpresasTable extends Migration
             $table->string('direccion');
             $table->string('pais');
             $table->string('clasificacion');
+            $table->boolean('invitable');
             $table->timestamps();
         });
     }

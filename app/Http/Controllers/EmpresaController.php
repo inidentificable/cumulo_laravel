@@ -32,6 +32,21 @@ class EmpresaController extends Controller
         return view('empresa.formempresa');
     }
 
+    public function invitarEmpresas()
+    {
+        $empresas = Empresa::where('invitable', 1)->paginate(10);
+        return view('empresa.todos', ['empresas' => $empresas]);
+    }
+
+    public function obtenerInvitados($id)
+    {
+        $empresa = Empresa::find($id);
+        if (!is_null($empresa))
+            return view('empresa.invitacion.todos', ['empresas' => $empresa->invitados->toArray()]);
+        else
+            return response('no encontrado', 404);
+    }
+
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -44,7 +59,8 @@ class EmpresaController extends Controller
             'ciudad' => 'required',
             'direccion' => 'required',
             'pais' => 'required',
-            'clasificacion' => 'required'
+            'clasificacion' => 'required',
+            'invitable' => 'required'
         ]);
 
         Empresa::create($request->all());

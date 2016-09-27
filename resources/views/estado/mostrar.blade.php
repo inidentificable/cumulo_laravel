@@ -1,4 +1,4 @@
-@extends('layouts.personalizado')
+@extends('layouts.inicio')
 
 @section('titulo', 'Detalles Estado')
 

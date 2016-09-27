@@ -12,19 +12,19 @@
     <p>Lista de todas las empresas ingresadas</p>
     <table class="table table-hover">
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>RUT</th>
-                <th>Nombre</th>
-                <th>Inicio de Actividades</th>
-                <th>Ingreso al Sistema</th>
-                <th>Teléfono</th>
-                <th>Comuna</th>
-                <th>Ciudad</th>
-                <th>Dirección</th>
-                <th>Pais</th>
-                <th>Clasificación</th>
-            </tr>
+        <tr>
+            <th>ID</th>
+            <th>RUT</th>
+            <th>Nombre</th>
+            <th>Inicio de Actividades</th>
+            <th>Ingreso al Sistema</th>
+            <th>Teléfono</th>
+            <th>Comuna</th>
+            <th>Ciudad</th>
+            <th>Dirección</th>
+            <th>Pais</th>
+            <th>Clasificación</th>
+        </tr>
         </thead>
         <tbody>
         @foreach ($empresas as $empresa)
@@ -44,5 +44,5 @@
         @endforeach
         </tbody>
     </table>
-    {!! $empresas->links() !!}
+
 @endsection

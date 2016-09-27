@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Agrúpate, comparte y crece con Cúmulo...">
-    <meta name="author" content="Cecilia Vergara - Claudio Reyes">
+    <meta name="author" content="Claudio Reyes">
     <link rel="icon" href="{{ asset('assets/imagenes/favico.ico') }}">
 
     <title>Cúmulo - @yield('titulo')</title>

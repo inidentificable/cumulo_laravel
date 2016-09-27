@@ -11,8 +11,8 @@ class EmpresaEstadoSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 100; $i++) {
-            DB::table('role_user')->insert(array('empresa_id' => $i, 'estado_id' => $i));
+        for ($i = 1; $i < 50; $i++) {
+            DB::table('empresa_estado')->insert(array('empresa_id' => $i, 'estado_id' => $i));
         }
     }
 }
