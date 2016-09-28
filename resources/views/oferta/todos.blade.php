@@ -32,5 +32,5 @@
         @endforeach
         </tbody>
     </table>
-    {!! $oferta->links() !!}
+    {!! $ofertas->links() !!}
 @endsection

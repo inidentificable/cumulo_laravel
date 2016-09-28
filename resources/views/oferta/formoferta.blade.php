@@ -27,6 +27,7 @@
             <label for="fecha_aprobada_oferta">Fecha Aprobación</label>
             <input type="date" class="form-control" id="fecha_aprobada_oferta" name="fecha_aprobada_oferta" value="{{--{{old('fecha_aprobada_oferta')}}--}}">
         </div>
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <button type="submit" class="btn btn-default">Crear oferta</button>
     </form>
 @endsection

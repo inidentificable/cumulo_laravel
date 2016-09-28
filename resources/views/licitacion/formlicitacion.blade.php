@@ -28,6 +28,10 @@
             <input type="number" class="form-control" id="minimo_ofertas" name="minimo_ofertas" min="1" value="{{--{{old('minimo_ofertas')}}--}}">
         </div>
         <div class="form-group">
+            <label for="maximo_ofertas">Máximo de ofertas:</label>
+            <input type="number" class="form-control" id="maximo_ofertas" name="maximo_ofertas" min="1" value="{{--{{old('maximo_ofertas')}}--}}">
+        </div>
+        <div class="form-group">
             <label for="costo_minimo">Costo mínimo:</label>
             <input type="number" class="form-control" id="costo_minimo" name="costo_minimo" min="1" value="{{--{{old('costo_minimo')}}--}}">
         </div>
@@ -43,6 +47,7 @@
             <label for="fecha_desierta">Fecha es desierta:</label>
             <input type="date" class="form-control" id="fecha_desierta" name="fecha_desierta" value="{{--{{old('fecha_desierta')}}--}}">
         </div>
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <button type="submit" class="btn btn-default">Crear licitacion</button>
     </form>
 @endsection
