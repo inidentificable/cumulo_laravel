@@ -1,8 +1,8 @@
-@extends('layouts.master')
+@extends('layouts.inicio')
 
-@section('title', 'Detalles Grupo')
+@section('titulo', 'Detalles Grupo')
 
-@section('sidebar')
+@section('barra-lateral')
     @parent
 
 @endsection
@@ -38,4 +38,5 @@
         @endforeach
         </tbody>
     </table>
+    {!! $grupos->links() !!}
 @endsection

@@ -23,7 +23,8 @@ class EmpresaSeeder extends Seeder
                 'ciudad' => "Ciudad ".$i,
                 'direccion' => "Direccion ".$i,
                 'pais' => "Pais ".$i,
-                'clasificacion' => "Clasificacion ".$i
+                'clasificacion' => "Clasificacion " . $i,
+                'invitable' => 1
             ]);
         }
     }

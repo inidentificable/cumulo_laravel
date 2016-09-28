@@ -1,8 +1,8 @@
-@extends('layouts.master')
+@extends('layouts.inicio')
 
-@section('title', 'Detalles Proyecto')
+@section('titulo', 'Detalles Proyecto')
 
-@section('sidebar')
+@section('barra-lateral')
     @parent
 
 @endsection
@@ -68,4 +68,5 @@
         @endforeach
         </tbody>
     </table>
+    {!! $proyectos->links() !!}
 @endsection

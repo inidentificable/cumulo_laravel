@@ -1,22 +1,14 @@
-@extends('layouts.master')
+@extends('layouts.inicio')
 
-@section('title', 'Ingresar una grupo')
+@section('titulo', 'Ingresar una grupo')
 
-@section('sidebar')
+@section('barra-lateral')
     @parent
 
 @endsection
 
 @section('content')
-    {{--@if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif--}}
+    @include('common.errors')
 <h1>Ingresar una grupo</h1>
     <form role="form" action="/grupos/crear" method="post">
         <div class="form-group">

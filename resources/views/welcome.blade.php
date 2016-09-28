@@ -1,45 +1,70 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.inicio')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('carrusel')
+    <!-- Carousel================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img class="first-slide" src="/assets/imagenes/carr1.jpg" width="600" height="480" alt="First slide">
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Agrúpate</h1>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+                        <p>Conoce nuevas empresas, comunicate con ellas y crea proyectos.</p>
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+                        <p><a class="btn btn-lg btn-primary" href="?i=CasosExito" role="button">Ver los casos de
+                                éxito</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="second-slide" src="/assets/imagenes/carr2.jpg" width="600" height="480" alt="Second slide">
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Comparte</h1>
 
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
+                        <p>Construye redes, comparte tus experiencias, tus necesidades e ideas.</p>
+
+                        <p><a class="btn btn-lg btn-primary" href="?i=OportunidadesNegocio" role="button">Revisa las
+                                oportunidades de negocio</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="third-slide" src="/assets/imagenes/carr3.jpg" width="600" height="480" alt="Third slide">
+
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Crece</h1>
+
+                        <p>El apoyo de tus redes te permitiraá crecer, dinamizar tus proyectos y ganar experiencia para
+                            enfrentar el mercado.</p>
+
+                        <p><a class="btn btn-lg btn-primary" href="?i=ConectarEmpresas" role="button">Aprende cómo
+                                conectar
+                                con otras empresas</a></p>
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
-</html>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div><!-- /.carousel -->
+@endsection
+
+

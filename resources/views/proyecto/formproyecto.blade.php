@@ -1,22 +1,14 @@
-@extends('layouts.master')
+@extends('layouts.inicio')
 
-@section('title', 'Ingresar una proyecto')
+@section('titulo', 'Ingresar una proyecto')
 
-@section('sidebar')
+@section('barra-lateral')
     @parent
 
 @endsection
 
 @section('content')
-    {{--@if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif--}}
+    @include('common.errors')
 <h1>Ingresar proyecto</h1>
     <form role="form" action="/proyectos/crear" method="post">
         <div class="form-group">

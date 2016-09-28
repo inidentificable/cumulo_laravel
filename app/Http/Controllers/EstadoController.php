@@ -8,10 +8,14 @@ use App\Http\Requests;
 
 class EstadoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
-        $estados = Estado::all();
-        return view('estado.todos', ['estados' => $estados->toArray()]);
+        $estados = Estado::paginate(10);
+        return view('estado.todos', ['estados' => $estados]);
     }
 
     public function show($id)

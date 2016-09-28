@@ -8,10 +8,14 @@ use App\Http\Requests;
 
 class GrupoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
-        $grupos = Grupo::all();
-        return view('grupo.todos', ['grupos' => $grupos->toArray()]);
+        $grupos = Grupo::paginate(10);
+        return view('grupo.todos', ['grupos' => $grupos]);
     }
 
     public function show($id)

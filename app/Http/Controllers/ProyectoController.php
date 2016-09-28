@@ -8,10 +8,14 @@ use App\Http\Requests;
 
 class ProyectoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
-        $proyectos = Proyecto::all();
-        return view('proyecto.todos', ['proyectos' => $proyectos->toArray()]);
+        $proyectos = Proyecto::paginate(10);
+        return view('proyecto.todos', ['proyectos' => $proyectos]);
     }
 
     public function show($id)

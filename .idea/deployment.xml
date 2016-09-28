@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="localCumuloLaravel">
+  <component name="PublishConfigData" deleteMissingItems="true" createEmptyFolders="true" filePermissions="493" folderPermissions="493">
     <serverData>
       <paths name="localCumuloLaravel">
         <serverdata>

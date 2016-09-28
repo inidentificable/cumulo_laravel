@@ -8,10 +8,14 @@ use App\Http\Requests;
 
 class OfertaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
-        $ofertas = Oferta::all();
-        return view('oferta.todos', ['ofertas' => $ofertas->toArray()]);
+        $ofertas = Oferta::paginate(10);
+        return view('oferta.todos', ['ofertas' => $ofertas]);
     }
 
     public function show($id)

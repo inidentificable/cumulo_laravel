@@ -1,22 +1,14 @@
-@extends('layouts.master')
+@extends('layouts.inicio')
 
-@section('title', 'Ingresar una licitacion')
+@section('titulo', 'Ingresar una licitacion')
 
-@section('sidebar')
+@section('barra-lateral')
     @parent
 
 @endsection
 
 @section('content')
-    {{--@if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif--}}
+    @include('common.errors')
 <h1>Ingresar una licitacion</h1>
     <form role="form" action="/licitaciones/crear" method="post">
         <div class="form-group">

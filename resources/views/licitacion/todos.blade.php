@@ -1,8 +1,8 @@
-@extends('layouts.master')
+@extends('layouts.inicio')
 
-@section('title', 'Detalles Licitacion')
+@section('titulo', 'Detalles Licitacion')
 
-@section('sidebar')
+@section('barra-lateral')
     @parent
 
 @endsection
@@ -42,4 +42,5 @@
         @endforeach
         </tbody>
     </table>
+    {!! $licitacions->links() !!}
 @endsection

@@ -1,8 +1,8 @@
-@extends('layouts.master')
+@extends('layouts.inicio')
 
-@section('title', 'Detalles Empresa')
+@section('titulo', 'Detalles Empresa')
 
-@section('sidebar')
+@section('barra-lateral')
     @parent
 
 @endsection
@@ -44,4 +44,5 @@
         @endforeach
         </tbody>
     </table>
+    {!! $empresas->links() !!}
 @endsection

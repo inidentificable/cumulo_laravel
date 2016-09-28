@@ -1,8 +1,8 @@
-@extends('layouts.master')
+@extends('layouts.inicio')
 
-@section('title', 'Detalles Permiso')
+@section('titulo', 'Detalles Permiso')
 
-@section('sidebar')
+@section('barra-lateral')
     @parent
 
 @endsection
