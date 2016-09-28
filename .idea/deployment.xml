@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" deleteMissingItems="true" createEmptyFolders="true" uploadOnCheckin="10d98b83-6a43-4a41-a354-f8e35e37d5bd" filePermissions="493" folderPermissions="493">
+  <component name="PublishConfigData" deleteMissingItems="true" createEmptyFolders="true" filePermissions="493" folderPermissions="493">
     <serverData>
       <paths name="localCumuloLaravel">
         <serverdata>
@@ -10,6 +10,5 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="cumulo_cl" />
   </component>
 </project>

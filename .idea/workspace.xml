@@ -1,65 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="334980cf-68c8-46dd-b43b-bdf7f9bd2796" name="Default" comment="Corrige detalles loggin, agrega paginador a las query &quot;ALL&quot;, agrega diagrama arboljs a la página principal - Mapa de oportunidades">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Producto.php-temp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_04_29_051319_create_empresa_empresa_pivot_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_06_12_232710_create_productos_table.php-temp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/EmpresaEmpresaSeeder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/ProductoSeeder.php-temp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/empresa/invitacion/forminvitacion.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/empresa/invitacion/mostrar.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/empresa/invitacion/todos.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layouts/carousel.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layouts/contenido.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layouts/head.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layouts/inicio.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/producto/formproducto.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/producto/mostrar.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/producto/todos.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/layouts/personalizado.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/personalizado.blade.php_old" />
+    <list default="true" id="334980cf-68c8-46dd-b43b-bdf7f9bd2796" name="Default" comment="Modifica la capa de vistas, agregando un nuevo template">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Empresa.php" afterPath="$PROJECT_DIR$/app/Empresa.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EmpresaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmpresaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_26_155410_create_empresas_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_26_155410_create_empresas_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_05_01_024130_create_empresa_estado_pivot_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_05_01_024130_create_empresa_estado_pivot_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/EmpresaEstadoSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/EmpresaEstadoSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/EmpresaSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/EmpresaSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/empresa/formempresa.blade.php" afterPath="$PROJECT_DIR$/resources/views/empresa/formempresa.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/empresa/mostrar.blade.php" afterPath="$PROJECT_DIR$/resources/views/empresa/mostrar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/empresa/todos.blade.php" afterPath="$PROJECT_DIR$/resources/views/empresa/todos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/estado/formestado.blade.php" afterPath="$PROJECT_DIR$/resources/views/estado/formestado.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/estado/mostrar.blade.php" afterPath="$PROJECT_DIR$/resources/views/estado/mostrar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/estado/todos.blade.php" afterPath="$PROJECT_DIR$/resources/views/estado/todos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/grupo/formgrupo.blade.php" afterPath="$PROJECT_DIR$/resources/views/grupo/formgrupo.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/grupo/mostrar.blade.php" afterPath="$PROJECT_DIR$/resources/views/grupo/mostrar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/grupo/todos.blade.php" afterPath="$PROJECT_DIR$/resources/views/grupo/todos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/licitacion/formlicitacion.blade.php" afterPath="$PROJECT_DIR$/resources/views/licitacion/formlicitacion.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/licitacion/mostrar.blade.php" afterPath="$PROJECT_DIR$/resources/views/licitacion/mostrar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/licitacion/todos.blade.php" afterPath="$PROJECT_DIR$/resources/views/licitacion/todos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/oferta/formoferta.blade.php" afterPath="$PROJECT_DIR$/resources/views/oferta/formoferta.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/oferta/mostrar.blade.php" afterPath="$PROJECT_DIR$/resources/views/oferta/mostrar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/oferta/todos.blade.php" afterPath="$PROJECT_DIR$/resources/views/oferta/todos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/permiso/formpermiso.blade.php" afterPath="$PROJECT_DIR$/resources/views/permiso/formpermiso.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/permiso/mostrar.blade.php" afterPath="$PROJECT_DIR$/resources/views/permiso/mostrar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/permiso/todos.blade.php" afterPath="$PROJECT_DIR$/resources/views/permiso/todos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/proyecto/formproyecto.blade.php" afterPath="$PROJECT_DIR$/resources/views/proyecto/formproyecto.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/proyecto/mostrar.blade.php" afterPath="$PROJECT_DIR$/resources/views/proyecto/mostrar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/proyecto/todos.blade.php" afterPath="$PROJECT_DIR$/resources/views/proyecto/todos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
     </list>
     <ignored path="cumulo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -8026,8 +7970,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="Claudio Claudio Reyes Miranda &lt;claudio.reyes.miranda@gmail.com&gt;" />
         <option value="Claudio Reyes" />
+        <option value="Claudio Claudio Reyes Miranda &lt;claudio.reyes.miranda@gmail.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -8461,7 +8405,7 @@
       <workItem from="1474083073044" duration="5956000" />
       <workItem from="1474335926302" duration="8685000" />
       <workItem from="1474346419315" duration="907000" />
-      <workItem from="1475018887385" duration="521000" />
+      <workItem from="1475018887385" duration="2305000" />
     </task>
     <task id="LOCAL-00001" summary="Check point domingo 22-05-2016">
       <created>1463979978731</created>
@@ -8484,11 +8428,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464236836393</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Modifica la capa de vistas, agregando un nuevo template">
+      <created>1475019496150</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1475019496150</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118181000" />
+    <option name="totallyTimeSpent" value="119965000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -8496,13 +8447,13 @@
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27382752" sideWeight="0.5130719" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25567323" sideWeight="0.4869281" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25567323" sideWeight="0.4869281" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41734862" sideWeight="0.5151286" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27659574" sideWeight="0.5181543" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32405892" sideWeight="0.49092284" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2777778" sideWeight="0.48487142" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27659574" sideWeight="0.48184568" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25816485" sideWeight="0.5063063" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -8536,7 +8487,8 @@
     <MESSAGE value="Check point domingo 22-05-2016" />
     <MESSAGE value="Corrige logica loggin" />
     <MESSAGE value="Corrige detalles loggin, agrega paginador a las query &quot;ALL&quot;, agrega diagrama arboljs a la página principal - Mapa de oportunidades" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrige detalles loggin, agrega paginador a las query &quot;ALL&quot;, agrega diagrama arboljs a la página principal - Mapa de oportunidades" />
+    <MESSAGE value="Modifica la capa de vistas, agregando un nuevo template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifica la capa de vistas, agregando un nuevo template" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -8656,6 +8608,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -8698,6 +8651,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -8790,6 +8744,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1292">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -8832,6 +8787,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-905">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -8839,6 +8795,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -8846,6 +8803,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -8853,6 +8811,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -8860,6 +8819,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
