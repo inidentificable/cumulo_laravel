@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Licitacion;
+use App\Oferta;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $licitacions = Licitacion::paginate(3);
+        $ofertas = Oferta::paginate(3);
+        return view('home', ['licitacions' => $licitacions, 'ofertas' => $ofertas]);
     }
 }

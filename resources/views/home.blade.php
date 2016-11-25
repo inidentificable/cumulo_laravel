@@ -13,22 +13,22 @@
             </h1>
         </div>
     </div>
-    </div>
     <div class="row">
         <div class="col-md-3">
-            <a href="#"><img
-                        src="https://unsplash.imgix.net/photo-1420708392410-3c593b80d416?w=1024&amp;q=50&amp;fm=jpg&amp;s=db450320d7ee6de66c24c9b0bf2de3c6"
-                        class="img-circle img-responsive"></a>
+            <a href="#">
+                <img src="https://unsplash.imgix.net/photo-1420708392410-3c593b80d416?w=1024&amp;q=50&amp;fm=jpg&amp;s=db450320d7ee6de66c24c9b0bf2de3c6" class="img-circle img-responsive">
+            </a>
             <blockquote>
                 <p>Bienvenido</p>
                 <footer>{{ Auth::user()->name }}</footer>
             </blockquote>
             <h1>Mis actividades</h1>
+            @include('actividad.minitabla')
             <ul class="media-list">
                 <li class="media">
-                    <a class="pull-left" href="#"><img class="media-object"
-                                                       src="https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55"
-                                                       height="64" width="64"></a>
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55" height="64" width="64">
+                    </a>
                     <div class="media-body">
                         <h4 class="media-heading">Media heading</h4>
                         <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
@@ -37,9 +37,9 @@
                     </div>
                 </li>
                 <li class="media">
-                    <a class="pull-left" href="#"><img class="media-object"
-                                                       src="https://unsplash.imgix.net/photo-1423439793616-f2aa4356b37e?w=1024&amp;q=50&amp;fm=jpg&amp;s=3b42f9c018b2712544debf4d6a4998ff"
-                                                       height="64" width="64"></a>
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="https://unsplash.imgix.net/photo-1423439793616-f2aa4356b37e?w=1024&amp;q=50&amp;fm=jpg&amp;s=3b42f9c018b2712544debf4d6a4998ff" height="64" width="64">
+                    </a>
                     <div class="media-body">
                         <h4 class="media-heading">Media heading</h4>
                         <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
@@ -56,46 +56,22 @@
                     <div class="row">
                         <div class="col-md-2">
                             <ul class="list-group">
-                                <li class="list-group-item">Agrúpate
+                                <li class="list-group-item">
+                                    <a href="grupos">Agrúpate</a>
                                     <span class="badge">42</span>
                                 </li>
-                                <li class="list-group-item">Proyetos</li>
-                                <li class="list-group-item">Licitaciones</li>
+                                <li class="list-group-item">
+                                    <a href="proyectos">Proyetos</a>
+                                    <span class="badge">5</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="proyectos">Licitaciones</a>
+                                    <span class="badge">7</span>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            <h1>Mis licitaciones</h1>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <a class="btn btn-block btn-primary">Ver todo</a>
+                            @include('licitacion.minitabla')
                         </div>
                     </div>
                 </div>
@@ -105,44 +81,14 @@
                     <div class="row">
                         <div class="col-md-2">
                             <ul class="list-group">
-                                <li class="list-group-item">Mis ofertas
+                                <li class="list-group-item">
+                                    <a href="proyectos">Mis ofertas</a>
                                     <span class="badge">3</span>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            <h1>Mis ofertas</h1>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <a class="btn btn-block btn-primary">Ver todo</a>
+                            @include('oferta.minitabla')
                         </div>
                     </div>
                 </div>
