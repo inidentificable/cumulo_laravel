@@ -152,6 +152,20 @@ Route::group(['middleware' => ['web']], function () {
     route::get('proyectos/{id}', [
         'middleware' => 'auth',
         'uses' => 'ProyectoController@show']);
+
+    //Mantenedor de actividad
+    route::get('actividades', [
+        'middleware' => 'auth',
+        'uses' => 'ActividadController@index']);
+    route::get('actividades/crear', [
+        'middleware' => 'auth',
+        'uses' => 'ActividadController@create']);
+    route::post('actividades/crear', [
+        'middleware' => 'auth',
+        'uses' => 'ActividadController@store']);
+    route::get('actividades/{id}', [
+        'middleware' => 'auth',
+        'uses' => 'ActividadController@show']);
 });
 
 

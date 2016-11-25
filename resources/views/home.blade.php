@@ -23,6 +23,7 @@
                 <footer>{{ Auth::user()->name }}</footer>
             </blockquote>
             <h1>Mis actividades</h1>
+            @include('actividad.minitabla')
             <ul class="media-list">
                 <li class="media">
                     <a class="pull-left" href="#">
@@ -80,7 +81,8 @@
                     <div class="row">
                         <div class="col-md-2">
                             <ul class="list-group">
-                                <li class="list-group-item">Mis ofertas
+                                <li class="list-group-item">
+                                    <a href="proyectos">Mis ofertas</a>
                                     <span class="badge">3</span>
                                 </li>
                             </ul>
