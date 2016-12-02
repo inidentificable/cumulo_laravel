@@ -26,6 +26,15 @@ class ProyectoController extends Controller
         else
             return response('no encontrado', 404);
     }
+    
+    public function misProyectos()
+    {
+        $proyecto = Proyecto::find($id);
+        if (!is_null($proyecto))
+            return view('proyecto.mostrar', ['proyecto' => $proyecto->toArray()]);
+        else
+            return response('no encontrado', 404);
+    }
 
     public function create()
     {

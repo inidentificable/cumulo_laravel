@@ -54,6 +54,9 @@ Route::group(['middleware' => ['web']], function () {
     route::get('empresas/invitados/{id}', [
         'middleware' => 'auth',
         'uses' => 'EmpresaController@obtenerInvitados']);
+    route::get('misempresas', [
+        'middleware' => 'auth',
+        'uses' => 'UserController@listarMisEmpresas']);
 
     //Mantenedor de productos
     route::get('productos', [
@@ -96,6 +99,9 @@ Route::group(['middleware' => ['web']], function () {
     route::get('grupos/{id}', [
         'middleware' => 'auth',
         'uses' => 'GrupoController@show']);
+    route::get('misgrupos', [
+        'middleware' => 'auth',
+        'uses' => 'UserController@listarMisGrupos']);
 
     //Mantenedor de licitaciones
     route::get('licitaciones', [
@@ -152,7 +158,7 @@ Route::group(['middleware' => ['web']], function () {
     route::get('proyectos/{id}', [
         'middleware' => 'auth',
         'uses' => 'ProyectoController@show']);
-
+    
     //Mantenedor de actividad
     route::get('actividades', [
         'middleware' => 'auth',

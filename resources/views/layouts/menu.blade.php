@@ -12,22 +12,22 @@
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="active">
-                    <a href="#">INICIO</a>
+                    <a href="{{ url('/') }}">INICIO</a>
                 </li>
 
                 {{--¿El usuario está autenticado?--}}
                 @if (Auth::check())
                     <li>
-                        <a href="#">MERCADO</a>
+                        <a href="{{ url('mercados') }}">MERCADO</a>
                     </li>
                     <li>
-                        <a href="#">GRUPOS</a>
+                        <a href="{{ url('grupos') }}">GRUPOS</a>
                     </li>
                     <li>
-                        <a href="#">PROYECTOS</a>
+                        <a href="{{ url('proyectos') }}">PROYECTOS</a>
                     </li>
                     <li>
-                        <a href="#">LICITACIONES</a>
+                        <a href="{{ url('licitaciones') }}">LICITACIONES</a>
                     </li>
                     <li>
                         <a href="#"> | </a>
@@ -45,29 +45,29 @@
                     </li>
                 @else
                     <li>
-                        <a href="#">¿QUIÉNES SOMOS?</a>
+                        <a href="{{ url('quienes') }}">¿QUIÉNES SOMOS?</a>
                     </li>
                     <li>
-                        <a href="#">BENEFICIOS</a>
+                        <a href="{{ url('beneficios') }}">BENEFICIOS</a>
                     </li>
                     <li>
-                        <a href="#">DEMOSTRACIÓN</a>
+                        <a href="{{ url('demo') }}">DEMOSTRACIÓN</a>
                     </li>
                     <li>
-                        <a href="#">CLIENTES</a>
+                        <a href="{{ url('clientes') }}">CLIENTES</a>
                     </li>
                     <li>
-                        <a href="#">CONTACTO</a>
+                        <a href="{{ url('contacto') }}">CONTACTO</a>
                     </li>
                     <li>
-                        <a href="#">AYUDA</a>
+                        <a href="{{ url('ayuda') }}">AYUDA</a>
                     </li>
                     <li>
                         <a href="#"> | </a>
                     </li>
                     {{--No está autenticado, muestro link de reemplazo del saludo--}}
                     <li>
-                        <a href="#">CÚMULO</a>
+                        <a href="{{ url('/') }}">CÚMULO</a>
                     </li>
                 @endif
             </ul>

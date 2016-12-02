@@ -41,10 +41,11 @@ class EmpresaController extends Controller
     public function obtenerInvitados($id)
     {
         $empresa = Empresa::find($id);
-        if (!is_null($empresa))
+        if (!is_null($empresa)){
             return view('empresa.invitacion.todos', ['empresas' => $empresa->invitados->toArray()]);
-        else
+        }else{
             return response('no encontrado', 404);
+        }
     }
 
     public function store(Request $request)
