@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'rut', 'email', 'username', 'password','es_emprendedor', 'es_empresario', 'es_inversionista', 'es_incubadora', 'url_imagen', 'bio'
     ];
 
     /**
@@ -33,10 +33,4 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Empresa','user_empresa','user_id','empresa_id');
     }
-    
-    public function misGrupos()
-    {
-        return $this->hasManyThrough('App\Empresa', 'App\Grupo');
-    }
-        
 }

@@ -67,5 +67,16 @@ class EmpresaController extends Controller
         Empresa::create($request->all());
         return redirect('/empresas');
     }
+    
+    public function listarGruposEmpresa($empresaId)
+    {
+        $empresa = Empresa::find($empresaId);
+        $grupos = $empresa->gruposPertenecenEmpresa()->paginate(10);
+        if (!is_null($grupos)){
+            return view('grupo.todos', ['grupos' => $grupos]);
+        }else{
+            return response('no encontrado', 404);
+        }
+    }
 
 }

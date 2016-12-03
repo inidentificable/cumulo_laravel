@@ -12,25 +12,18 @@ class CreateActividadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('actividades', function (Blueprint $table) {
+        Schema::create('actividads', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->dateTimeTz('inicio');
-            $table->dateTimeTz('termino');
-            $table->string('nombre');
-            $table->string('descripcion');
-            $table->string('comuna');
-            $table->string('ciudad');
-            $table->string('direccion');
-            $table->string('pais');
-            $table->string('clasificacion');
-            $table->boolean('pendiente');
+            $table->dateTimeTz('fecha_creada');
+            $table->dateTimeTz('fecha_revisada');
+            $table->string('titulo');
+            $table->string('detalle');
+            $table->string('tipo');
+            $table->boolean('revisada');
+            $table->string('url_imagen');
 
             $table->timestamps();
-
-            //Para mantener la integridad de referencia en la base de datos (un usuario puede tener muchas actividades)
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -41,7 +34,7 @@ class CreateActividadsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('actividades');
+        Schema::drop('actividads');
 
     }
 }

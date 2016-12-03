@@ -10,7 +10,7 @@ class Grupo extends Model
     
     public function empresasCreanGrupos()
     {
-        return $this->belongsToManyMany('App\Empresa');
+        return $this->belongsToMany('App\Grupo','empresa_grupo','grupo_id','empresa_id');
     }
     public function gruposCreanProyectos()
     {

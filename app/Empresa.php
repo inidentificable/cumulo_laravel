@@ -15,7 +15,7 @@ class Empresa extends Model
     
     public function gruposPertenecenEmpresa()
     {
-        return $this->hasMany('App\Grupo');
+        return $this->belongsToMany('App\Grupo','empresa_grupo','empresa_id','grupo_id');
     }
     
     public function estadoActualEmpresa()

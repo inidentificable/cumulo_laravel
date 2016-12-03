@@ -99,6 +99,9 @@ Route::group(['middleware' => ['web']], function () {
     route::get('grupos/{id}', [
         'middleware' => 'auth',
         'uses' => 'GrupoController@show']);
+    route::get('gruposempresa/{empresaId}', [
+        'middleware' => 'auth',
+        'uses' => 'EmpresaController@listarGruposEmpresa']);
     route::get('misgrupos', [
         'middleware' => 'auth',
         'uses' => 'UserController@listarMisGrupos']);
