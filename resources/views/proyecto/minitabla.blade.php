@@ -13,9 +13,14 @@
             <a href="{{$proyecto['enlace_externo']}}">(ver enlace externo)</a>, 
             <a href="/proyectos/{{$proyecto['id']}}">(ver más)</a>
         </p>
+        @if(Auth::user()->es_inversionista == 1)
         <a href="/proyectos/{{$proyecto['id']}}/nomegusta"><i class="fa fa-3x fa-fw fa-bomb"></i></a>
         <a href="/proyectos/{{$proyecto['id']}}/darconsejo"><i class="fa fa-3x fa-fw fa-ambulance"></i></a>
         <a href="/proyectos/{{$proyecto['id']}}/megusta"><i class="fa fa-3x fa-fw fa-angellist"></i></a>
+        @endif
+        @if(Auth::user()->es_emprendedor == 1)
+        <a href="/proyectos/{{$proyecto['id']}}/editar"><i class="fa fa-3x fa-fw fa-line-chart"></i></a>
+        @endif
     </div>
 </li>
 @endforeach

@@ -35,33 +35,33 @@ class HomeController extends Controller
     }
     public function indexEmprendedor()
     {
-        $proyectos = Proyecto::paginate(10);
+        $proyectos = Proyecto::paginate(4);
         return view('homeemprendedor', ['proyectos' => $proyectos]);
     }
     public function indexEmpresario()
     {
-        $licitacions = Licitacion::paginate(3);
-        $ofertas = Oferta::paginate(3);
-        $actividades = Actividad::paginate(5);
+        $licitacions = Licitacion::paginate(5);
+        $ofertas = Oferta::paginate(5);
+        $actividades = Actividad::paginate(4);
         return view('homeempresario', ['licitacions' => $licitacions, 'ofertas' => $ofertas, 'actividades' => $actividades]);
     }
     public function indexInversionista()
     {
-        $licitacions = Licitacion::paginate(3);
-        $ofertas = Oferta::paginate(3);
-        $actividades = Actividad::paginate(5);
+        $licitacions = Licitacion::paginate(5);
+        $ofertas = Oferta::paginate(5);
+        $actividades = Actividad::paginate(4);
         return view('homeinversionista', ['licitacions' => $licitacions, 'ofertas' => $ofertas, 'actividades' => $actividades]);
     }
     public function indexIncubadora()
     {
-        $proyectos = Proyecto::paginate(10);
+        $proyectos = Proyecto::paginate(5);
         return view('homeincubadora', ['proyectos' => $proyectos]);
     }
     public function indexInterno()
     {
-        $licitacions = Licitacion::paginate(3);
-        $ofertas = Oferta::paginate(3);
-        $actividades = Actividad::paginate(5);
+        $licitacions = Licitacion::paginate(5);
+        $ofertas = Oferta::paginate(5);
+        $actividades = Actividad::paginate(4);
         return view('homeinterno', ['licitacions' => $licitacions, 'ofertas' => $ofertas, 'actividades' => $actividades]);
     }
 }
