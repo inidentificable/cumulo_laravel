@@ -3,71 +3,35 @@
 @section('titulo', 'Home')
 
 @section('barra-lateral')
-    @parent
+@parent
 @endsection
 @section('content')
-    <div class="col-md-12">
-        <div class="page-header">
-            <h1>Bienvenido a Cúmulo
-                <small>{Agrúpate, comparte y crece}</small>
-            </h1>
-        </div>
+<div class="col-md-12">
+    <div class="page-header">
+        <h1>Bienvenido Evaluador
+            <small>{Buscar nuevas ideas}</small>
+        </h1>
     </div>
-    <div class="row">
-        <div class="col-md-3">
-            <a href="#">
-                <img src="{{ Auth::user()->url_imagen }}" class="img-circle img-responsive">
-            </a>
-            <blockquote>
-                <p>Bienvenido {{ Auth::user()->name }}: {{ Auth::user()->bio }}</footer>
-                <footer>plataforma.cumulo.cl</footer>
-            </blockquote>
-            @include('actividad.minitabla')
-            
-        </div>
-        <div class="col-md-8">
-            <div class="section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <a href="grupos">Agrúpate</a>
-                                    <span class="badge">42</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="proyectos">Proyetos</a>
-                                    <span class="badge">5</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="proyectos">Licitaciones</a>
-                                    <span class="badge">7</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            @include('licitacion.minitabla')
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <a href="proyectos">Mis ofertas</a>
-                                    <span class="badge">3</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            @include('oferta.minitabla')
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <a href="#">
+            <img src="{{ Auth::user()->url_imagen }}" class="img-circle img-responsive">
+        </a>
+        <blockquote>
+            <p>Bienvenido {{ Auth::user()->name }}: {{ Auth::user()->bio }}</footer>
+            <footer>plataforma.cumulo.cl</footer>
+        </blockquote>
+        <ul class="list-group">
+            <li class="list-group-item">Mi Cúmulo</li>
+            <li class="list-group-item">Patrocinar proyecto</li>
+            <li class="list-group-item">Buscar nuevas ideas</li>
+        </ul>
+
     </div>
-@endsection
+    <div class="col-md-8">
+        <ul class="media-list">
+            @include('proyecto.minitabla')
+        </ul>
+    </div>
+    @endsection

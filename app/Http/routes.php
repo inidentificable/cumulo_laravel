@@ -34,6 +34,23 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => 'auth',
         'uses' => 'HomeController@index']);
     Route::auth();
+    
+    //Login roles (03-12-2016 creyes)
+    Route::get('/home_emprendedor', [
+        'middleware' => 'auth',
+        'uses' => 'HomeController@indexEmprendedor']);
+    Route::get('/home_empresario', [
+        'middleware' => 'auth',
+        'uses' => 'HomeController@indexEmpresario']);
+    Route::get('/home_inversionista', [
+        'middleware' => 'auth',
+        'uses' => 'HomeController@indexInversionista']);
+    Route::get('/home_incubadora', [
+        'middleware' => 'auth',
+        'uses' => 'HomeController@indexIncubadora']);
+    Route::get('/home_interno', [
+        'middleware' => 'auth',
+        'uses' => 'HomeController@indexInterno']);
 
     //Mantenedor de empresas
     route::get('empresas', [
