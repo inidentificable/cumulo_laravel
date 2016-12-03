@@ -8,7 +8,7 @@
 @section('content')
     <div class="col-md-12">
         <div class="page-header">
-            <h1>Bienvenido a Cúmulo
+            <h1><i class="fa fa-briefcase" aria-hidden="true"></i> Bienvenido Empresario
                 <small>{Agrúpate, comparte y crece}</small>
             </h1>
         </div>

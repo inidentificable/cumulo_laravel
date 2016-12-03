@@ -8,7 +8,7 @@
 @section('content')
 <div class="col-md-12">
     <div class="page-header">
-        <h1>Bienvenido Evaluador
+        <h1><i class="fa fa-diamond" aria-hidden="true"></i> Bienvenido Evaluador
             <small>{Buscar nuevas ideas}</small>
         </h1>
     </div>

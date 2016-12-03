@@ -8,8 +8,8 @@
 @section('content')
 <div class="col-md-12">
     <div class="page-header">
-        <h1>Bienvenido Evaluador
-            <small>{Buscar nuevas ideas}</small>
+        <h1><i class="fa fa-child" aria-hidden="true"></i> Bienvenido Emprendedor
+            <small>{Organiza tus ideas, crea tus proyectos}</small>
         </h1>
     </div>
 </div>

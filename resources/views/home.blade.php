@@ -8,7 +8,7 @@
 @section('content')
 <div class="col-md-12">
     <div class="page-header">
-        <h1>Bienvenido {{ Auth::user()->name }}
+        <h1><i class="fa fa-sellsy" aria-hidden="true"></i> Bienvenido {{ Auth::user()->name }}
             <small>{Ingreso a tus roles}</small>
         </h1>
     </div>

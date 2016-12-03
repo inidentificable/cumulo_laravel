@@ -8,8 +8,8 @@
 @section('content')
     <div class="col-md-12">
         <div class="page-header">
-            <h1>Bienvenido a Cúmulo
-                <small>{Agrúpate, comparte y crece}</small>
+            <h1><i class="fa fa-key" aria-hidden="true"></i> Bienvenido Usuario Interno
+                <small>{Revisa las situaciones pendientes}</small>
             </h1>
         </div>
     </div>
