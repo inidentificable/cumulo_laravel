@@ -12,7 +12,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {        
-        User::create(['rut' => '16.488.471-6', 'name' => 'Claudio Reyes', 'email' => 'claudio.reyes.miranda@gmail.com', 'username' => 'inidentificable', 'password' => 'P2l141987', 'es_emprendedor' => '1', 'es_empresario' => '1', 'es_inversionista' => '1', 'es_incubadora' => '1', 'url_imagen' => asset('assets/imagenes/1_profile.jpg'), 'bio' => 'Socio y co-founder de Cúmulo SpA, Gerente General']);
+        User::create(['rut' => '16.488.471-6', 'name' => 'Claudio Reyes', 'email' => 'claudio.reyes.miranda@gmail.com', 'username' => 'inidentificable', 'password' => Hash::make('P2l141987'), 'es_emprendedor' => '1', 'es_empresario' => '1', 'es_inversionista' => '1', 'es_incubadora' => '1', 'es_interno' => '1', 'url_imagen' => asset('assets/imagenes/1_profile.jpg'), 'bio' => 'Socio y co-founder de Cúmulo SpA, Gerente General']);
         $binario=1;
         $binarioAlt=0;
         for ($i=0; $i<100; $i++) {
@@ -21,11 +21,12 @@ class UserSeeder extends Seeder
                 'name' => 'Usuario '.$i.'esimo',
                 'email' => 'usuario'.$i.'@cumulo.cl',
                 'username' => 'usuario'.$i,
-                'password' => $i."a",
-                'es_emprendedor' => '"'.$binario.'"',
-                'es_empresario' => '"'.$binarioAlt.'"',
-                'es_inversionista' => '"'.$binarioAlt.'"',
-                'es_incubadora' => '"'.$binarioAlt.'"',
+                'password' => Hash::make($i.'a'),
+                'es_emprendedor' => $binario,
+                'es_empresario' => $binarioAlt,
+                'es_inversionista' => $binario,
+                'es_incubadora' => $binarioAlt,
+                'es_interno' => $binario,
                 'url_imagen' => asset('assets/imagenes/cumulo.jpg'),
                 'bio' => 'Me defino como un usuario muy '.$i.' mi interes es emprender de '.$i.' en '.$i
             ]);

@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->boolean('es_empresario');
             $table->boolean('es_inversionista');
             $table->boolean('es_incubadora');
+            $table->boolean('es_interno');
             $table->string('url_imagen');
             $table->string('bio');
             $table->rememberToken();

@@ -13,5 +13,5 @@
         </div>
     </li>
     @endforeach
-</ul>s
+</ul>
 <a class="btn btn-block btn-primary" href="actividades">Ver todo</a>

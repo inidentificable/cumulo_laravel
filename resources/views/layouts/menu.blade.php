@@ -38,9 +38,24 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/') }}"><i class="fa fa-btn fa-sign-out"></i>Editar perfil</a></li>
-                            <li><a href="{{ url('/') }}"><i class="fa fa-btn fa-sign-out"></i>Invitaciones</a></li>
-                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Salir</a></li>
+                            <li><a href="{{ url('/') }}"><i class="fa fa-btn fa-sign-out"></i> Editar perfil</a></li>
+                            <li><a href="{{ url('/') }}"><i class="fa fa-btn fa-sign-out"></i> Invitaciones</a></li>
+                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Salir</a></li>
+                            @if(Auth::user()->es_emprendedor == 1)
+                                <li><a href="{{ url('/home_emprendedor') }}"><i class="fa fa-btn fa-child"></i> Emprendedor</a></li>
+                            @endif
+                            @if(Auth::user()->es_empresario == 1)
+                                <li><a href="{{ url('/home_empresario') }}"><i class="fa fa-btn fa-briefcase"></i> Empresario</a></li>
+                            @endif
+                            @if(Auth::user()->es_inversionista == 1)
+                                <li><a href="{{ url('/home_inversionista') }}"><i class="fa fa-btn fa-university"></i> Inversionista</a></li>
+                            @endif
+                            @if(Auth::user()->es_incubadora == 1)
+                                <li><a href="{{ url('/home_incubadora') }}"><i class="fa fa-btn fa-diamond"></i> Incubadora</a></li>
+                            @endif
+                            @if(Auth::user()->es_interno == 1)
+                                <li><a href="{{ url('/home_interno') }}"><i class="fa fa-btn fa-key"></i> Interno</a></li>
+                            @endif
                         </ul>
                     </li>
                 @else

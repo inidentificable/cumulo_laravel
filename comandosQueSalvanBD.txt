@@ -1,0 +1,4 @@
+php artisan migrate:reset
+composer dump-autoload
+php artisan migrate
+php artisan db:seed

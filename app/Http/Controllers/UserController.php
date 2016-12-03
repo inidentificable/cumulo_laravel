@@ -17,7 +17,7 @@ class UserController extends Controller {
             return response('no encontrado', 404);
         }
     }
-
+       
     public function listarMisGrupos() {
         $user = User::find(1);
         

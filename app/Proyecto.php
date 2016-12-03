@@ -13,4 +13,9 @@ class Proyecto extends Model
         return $this->belongsTo('App\Grupo');
     }
     
+    public function proyectosCreanLicitaciones()
+    {
+        return $this->hasMany('App\Licitacion');
+    }
+    
 }
