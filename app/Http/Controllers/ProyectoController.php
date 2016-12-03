@@ -45,6 +45,9 @@ class ProyectoController extends Controller
     {
         $this->validate($request, [
             'nombre' => 'required',
+            'descripcion' => 'required',
+            'url_imagen' => 'required',
+            'link_externo' => 'required',
             'esta_activo' => 'required',
             'fecha_desactiva' => 'required',
             'fecha_creacion' => 'required',

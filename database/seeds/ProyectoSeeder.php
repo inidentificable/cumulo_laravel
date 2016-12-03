@@ -15,6 +15,10 @@ class ProyectoSeeder extends Seeder
         for ($i=0; $i<100; $i++) {
             Proyecto::create([
                 'nombre' => 'Proyecto '.$i,
+                'descripcion' => 'El Proyecto '.$i.' es un proyecto que se genera automáticamente con el Seeder de Laravel'.
+                'revisa el link externo que hemos agregado para que veas las historias de usuario de nuestro proyecto, gracias por visitarnos',
+                'url_imagen' => asset('/assets/imagenes/client.jpg'),
+                'link_externo' => asset('/assets/documentos/HistoriasUsuarioCumulo.xlsx'),
                 'esta_activo' => 0,
                 'fecha_desactiva' => '2016-03-27',
                 'fecha_creacion' => '2016-03-23',

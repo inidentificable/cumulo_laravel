@@ -35,17 +35,15 @@ class HomeController extends Controller
     }
     public function indexEmprendedor()
     {
-        $licitacions = Licitacion::paginate(3);
-        $ofertas = Oferta::paginate(3);
-        $actividades = Actividad::paginate(5);
-        return view('homeemprendedor', ['licitacions' => $licitacions, 'ofertas' => $ofertas, 'actividades' => $actividades]);
+        $proyectos = Proyecto::paginate(10);
+        return view('homeemprendedor', ['proyectos' => $proyectos]);
     }
     public function indexEmpresario()
     {
         $licitacions = Licitacion::paginate(3);
         $ofertas = Oferta::paginate(3);
         $actividades = Actividad::paginate(5);
-        return view('home', ['licitacions' => $licitacions, 'ofertas' => $ofertas, 'actividades' => $actividades]);
+        return view('homeempresario', ['licitacions' => $licitacions, 'ofertas' => $ofertas, 'actividades' => $actividades]);
     }
     public function indexInversionista()
     {

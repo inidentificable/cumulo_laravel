@@ -8,8 +8,8 @@
 @section('content')
     <div class="col-md-12">
         <div class="page-header">
-            <h1>Bienvenido Emprendedor
-                <small>{Comparte tus proyectos con la comunidad}</small>
+            <h1>Bienvenido a Cúmulo
+                <small>{Agrúpate, comparte y crece}</small>
             </h1>
         </div>
     </div>
@@ -22,7 +22,7 @@
                 <p>Bienvenido {{ Auth::user()->name }}: {{ Auth::user()->bio }}</footer>
                 <footer>plataforma.cumulo.cl</footer>
             </blockquote>
-            
+            @include('actividad.minitabla')
             
         </div>
         <div class="col-md-8">
@@ -39,10 +39,31 @@
                                     <a href="proyectos">Proyetos</a>
                                     <span class="badge">5</span>
                                 </li>
+                                <li class="list-group-item">
+                                    <a href="proyectos">Licitaciones</a>
+                                    <span class="badge">7</span>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            @include('proyecto.minitabla')
+                            @include('licitacion.minitabla')
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="ofertas">Mis ofertas</a>
+                                    <span class="badge">3</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            @include('oferta.minitabla')
                         </div>
                     </div>
                 </div>
