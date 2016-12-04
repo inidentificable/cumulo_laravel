@@ -39,7 +39,8 @@ class ProyectoSeeder extends Seeder
                 'capital_minimo_participacion' => 999*$i,
                 'capital_maximo_participacion' => 9999*$i,
                 'porcentaje_minimo_participacion' => 0.01*$i+4,
-                'porcentaje_maximo_participacion' => 0.01*$i+11
+                'porcentaje_maximo_participacion' => 0.01*$i+11,
+                'grupo_id' => rand(1,99)
             ]);
         }
     }

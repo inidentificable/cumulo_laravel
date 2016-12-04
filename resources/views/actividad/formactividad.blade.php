@@ -11,15 +11,15 @@
     @include('common.errors')
 <h1>Ingresar un registro de actividad</h1>
     <form role="form" action="/actividad/crear" method="post">
-        <div class="form-group">
+        <div class="form-group col-md-4">
             <label for="es_privada">Título:</label>
             <input type="number" class="form-control" id="titulo" name="titulo" value="{{--{{old('titulo')}}--}}">
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-4">
             <label for="fecha_inicio">Detalle:</label>
             <input type="date" class="form-control" id="detalle" name="detalle" value="{{--{{old('detalle')}}--}}">
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-4">
             <label for="fecha_termino">Tipo:</label>
             <input type="date" class="form-control" id="tipo" name="tipo" value="{{--{{old('tipo')}}--}}">
         </div>

@@ -33,11 +33,7 @@ class HomeController extends Controller
         $actividades = Actividad::paginate(5);
         return view('home', ['licitacions' => $licitacions, 'ofertas' => $ofertas, 'actividades' => $actividades]);
     }
-    public function indexEmprendedor()
-    {
-        $proyectos = Proyecto::paginate(4);
-        return view('homeemprendedor', ['proyectos' => $proyectos]);
-    }
+    
     public function indexEmpresario()
     {
         $licitacions = Licitacion::paginate(5);

@@ -10,7 +10,7 @@
             el TIR: {{$proyecto['tir']}}</strong>, 
             la fecha de inicio: {{$proyecto['fecha_inicio_provable']}} 
             y la fecha de término: {{$proyecto['fecha_termino_provable']}}. 
-            <a href="{{$proyecto['enlace_externo']}}">(ver enlace externo)</a>, 
+            <a href="{{$proyecto['link_externo']}}" target="_blank">(ver enlace externo)</a>, 
             <a href="/proyectos/{{$proyecto['id']}}">(ver más)</a>
         </p>
         @if(Auth::user()->es_inversionista == 1)
@@ -24,5 +24,7 @@
     </div>
 </li>
 @endforeach
+@if($proyectos instanceof \Illuminate\Pagination\LengthAwarePaginator )
 {!! $proyectos->links() !!}
+@endif
 <a class="btn btn-block btn-primary" href="proyectos">Ver todo</a>

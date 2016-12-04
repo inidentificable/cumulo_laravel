@@ -23,9 +23,15 @@
             <footer>plataforma.cumulo.cl</footer>
         </blockquote>
         <ul class="list-group">
-            <li class="list-group-item">Agrúpate</li>
-            <li class="list-group-item">Comparte</li>
-            <li class="list-group-item">Crece</li>
+            <li class="list-group-item">
+                <a href="misgruposemprendedor">Agrúpate</a>
+            </li>
+            <li class="list-group-item">
+                <a href="proyectos">Comparte</a>
+            </li>
+            <li class="list-group-item">
+                <a href="empresas/crear">Crece</a>
+            </li>
         </ul>
 
     </div>

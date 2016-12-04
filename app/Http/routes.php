@@ -38,7 +38,7 @@ Route::group(['middleware' => ['web']], function () {
     //Login roles (03-12-2016 creyes)
     Route::get('/home_emprendedor', [
         'middleware' => 'auth',
-        'uses' => 'HomeController@indexEmprendedor']);
+        'uses' => 'UserController@indexEmprendedor']);
     Route::get('/home_empresario', [
         'middleware' => 'auth',
         'uses' => 'HomeController@indexEmpresario']);
@@ -122,6 +122,9 @@ Route::group(['middleware' => ['web']], function () {
     route::get('misgrupos', [
         'middleware' => 'auth',
         'uses' => 'UserController@listarMisGrupos']);
+    route::get('misgruposemprendedor', [
+        'middleware' => 'auth',
+        'uses' => 'UserController@listarMisGruposEmprendedor']);
 
     //Mantenedor de licitaciones
     route::get('licitaciones', [
@@ -178,6 +181,12 @@ Route::group(['middleware' => ['web']], function () {
     route::get('proyectos/{id}', [
         'middleware' => 'auth',
         'uses' => 'ProyectoController@show']);
+    route::get('proyectos/{id}/editar', [
+        'middleware' => 'auth',
+        'uses' => 'ProyectoController@show']);
+    route::post('proyectos/{id}/actualizar', [
+        'middleware' => 'auth',
+        'uses' => 'ProyectoController@update']);
     
     //Mantenedor de actividad
     route::get('actividades', [

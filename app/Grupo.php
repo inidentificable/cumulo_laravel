@@ -12,10 +12,14 @@ class Grupo extends Model
     {
         return $this->belongsToMany('App\Grupo','empresa_grupo','grupo_id','empresa_id');
     }
-    
-    
+        
     public function gruposCreanProyectos()
     {
         return $this->hasMany('App\Proyecto');
+    }
+    
+    public function emprendedorParticipaGrupoProyectos()
+    {
+        return $this->belongToMany('App\User', 'grupo_user','grupo_id','user_id')->where('es_emprendedor', '=', 1);
     }
 }

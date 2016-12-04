@@ -74,4 +74,40 @@ class ProyectoController extends Controller
         Proyecto::create($request->all());
         return redirect('/proyectos');
     }
+    
+    public function update(Request $request)
+    {
+        $this->validate($request, [
+            'id' => 'required',
+            'nombre' => 'required',
+            'descripcion' => 'required',
+            'url_imagen' => 'required',
+            'link_externo' => 'required',
+            'esta_activo' => 'required',
+            'fecha_desactiva' => 'required',
+            'fecha_creacion' => 'required',
+            'fecha_inicio_provable' => 'required',
+            'fecha_inicio_real' => 'required',
+            'fecha_termino_provable' => 'required',
+            'fecha_termino_real' => 'required',
+            'tir' => 'required',
+            'tasa_exigida_pesimista' => 'required',
+            'tasa_exigida_moderada' => 'required',
+            'tasa_exigida_optimista' => 'required',
+            'van' => 'required',
+            'presupuesto_inicial' => 'required',
+            'presupuesto_licitado' => 'required',
+            'presupuesto_aprobado' => 'required',
+            'minimo_socios' => 'required',
+            'maximo_socios' => 'required',
+            'capital_minimo_participacion' => 'required',
+            'capital_maximo_participacion' => 'required',
+            'porcentaje_minimo_participacion' => 'required',
+            'porcentaje_maximo_participacion' => 'required'
+        ]);
+        $proyecto = Proyecto::find($request->id);
+        $input = $request->all();
+        $proyecto->fill($input)->save();
+        return redirect('/proyectos/'.$proyecto->id);
+    }
 }

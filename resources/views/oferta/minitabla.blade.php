@@ -1,23 +1,25 @@
 <h1>Mis Ofertas</h1>
 <table class="table table-hover">
-<thead>
-<tr>
-    <th>Fecha oferta</th>
-    <th>Monto oferta</th>
-    <th>Aprobada</th>
-    <th>Fecha aprobación</th>
-</tr>
-</thead>
-<tbody>
-@foreach ($ofertas as $oferta)
-    <tr onclick="document.location = '/ofertas/{{$oferta['id']}}';">
-        <td>{{$oferta['fecha_oferta']}}</td>
-        <td>{{$oferta['monto_oferta']}}</td>
-        <td>{{$oferta['es_aprobada_oferta']}}</td>
-        <td>{{$oferta['fecha_aprobada_oferta']}}</td>
-    </tr>
-@endforeach
-</tbody>
+    <thead>
+        <tr>
+            <th>Fecha oferta</th>
+            <th>Monto oferta</th>
+            <th>Aprobada</th>
+            <th>Fecha aprobación</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($ofertas as $oferta)
+        <tr onclick="document.location = '/ofertas/{{$oferta['id']}}';">
+            <td>{{$oferta['fecha_oferta']}}</td>
+            <td>{{$oferta['monto_oferta']}}</td>
+            <td>{{$oferta['es_aprobada_oferta']}}</td>
+            <td>{{$oferta['fecha_aprobada_oferta']}}</td>
+        </tr>
+        @endforeach
+    </tbody>
 </table>
+@if($ofertas instanceof \Illuminate\Pagination\LengthAwarePaginator )
 {!! $ofertas->links() !!}
+@endif
 <a class="btn btn-block btn-primary" href="ofertas">Ver todo</a>

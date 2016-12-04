@@ -39,6 +39,8 @@ class CreateProyectosTable extends Migration
             $table->float('capital_maximo_participacion');
             $table->float('porcentaje_minimo_participacion');
             $table->float('porcentaje_maximo_participacion');
+            $table->integer('grupo_id')->unsigned();
+            $table->foreign('grupo_id')->references('id')->on('grupos')->onDelete('cascade');
             $table->timestamps();
         });
     }

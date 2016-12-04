@@ -33,4 +33,9 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Empresa','user_empresa','user_id','empresa_id');
     }
+    
+    public function emprendedorParticipaGrupo()
+    {
+        return $this->belongsToMany('App\Grupo','grupo_user','user_id','grupo_id')->where('activo', '=', 1);
+    }
 }

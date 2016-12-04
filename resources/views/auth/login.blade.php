@@ -27,14 +27,14 @@
                 @endif
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-4">
             <div class="col-md-6 col-md-offset-4">
                 <div class="checkbox">
                     <label><input type="checkbox" name="remember">recordarme</label>
                 </div>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-4">
             <div class="col-md-6 col-md-offset-4">
                 {{-- Botón login --}}
                 <button type="submit" class="btn btn-primary">

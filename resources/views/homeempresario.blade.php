@@ -40,7 +40,7 @@
                                     <span class="badge">5</span>
                                 </li>
                                 <li class="list-group-item">
-                                    <a href="proyectos">Licitaciones</a>
+                                    <a href="licitaciones">Licitaciones</a>
                                     <span class="badge">7</span>
                                 </li>
                             </ul>
