@@ -4,7 +4,7 @@
 #INACAP - Renca
 
 
-composer sel-update
+composer self-update
 git pull
 php artisan migrate:reset
 composer dump-autoload
