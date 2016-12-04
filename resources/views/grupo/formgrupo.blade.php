@@ -9,7 +9,7 @@
 
 @section('content')
     @include('common.errors')
-<h1>Ingresar una grupo</h1>
+<h1>Crear un nuevo grupo</h1>
     <form role="form" action="/grupos/crear" method="post">
         <div class="form-group col-md-4">
             <label for="nombre">Nombre grupo:</label>
@@ -39,6 +39,7 @@
             <label for="rol_personalidad_juridica">Rol personalidad juridica:</label>
             <input type="text" class="form-control" id="rol_personalidad_juridica" name="rol_personalidad_juridica" value="{{--{{old('rol_personalidad_juridica')}}--}}">
         </div>
-        <button type="submit" class="btn btn-default">Crear grupo</button>
+        <button type="submit" class="btn btn-block btn-primary">Crear grupo</button>
     </form>
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

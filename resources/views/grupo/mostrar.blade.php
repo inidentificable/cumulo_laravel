@@ -41,7 +41,7 @@
     <div class="form-group col-md-4">
         <label for="rol_personalidad_juridica">Rol personalidad juridica:</label>
         <input type="text" class="form-control" id="rol_personalidad_juridica" name="rol_personalidad_juridica" value="{{$grupo['rol_personalidad_juridica']}}" readonly>
-    </div>
-    <button type="submit" class="btn btn-default">Volver</button>
-    </form>
+    </div><button type="submit" class="btn btn-block btn-primary">Guardar Cambios</button>
+</form>
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

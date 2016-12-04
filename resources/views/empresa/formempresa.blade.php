@@ -27,6 +27,7 @@
             <label for="fecha_aprobada_empresa">Fecha Aprobación</label>
             <input type="date" class="form-control" id="fecha_aprobada_empresa" name="fecha_aprobada_empresa" value="{{--{{old('fecha_aprobada_empresa')}}--}}">
         </div>
-        <button type="submit" class="btn btn-default">Crear empresa</button>
+        <button type="submit" class="btn btn-block btn-primary">Crear empresa</button>
     </form>
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

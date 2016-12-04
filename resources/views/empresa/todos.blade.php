@@ -47,4 +47,5 @@
 @if($empresas instanceof \Illuminate\Pagination\LengthAwarePaginator )
 {!! $empresas->links() !!}
 @endif
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

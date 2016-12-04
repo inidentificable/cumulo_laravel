@@ -30,6 +30,7 @@
         <label for="fecha_aprobada_oferta">Fecha Aprobación</label>
         <input type="date" class="form-control" id="fecha_aprobada_oferta" name="fecha_aprobada_oferta" value="{{$oferta['fecha_aprobada_oferta']}}" readonly>
     </div>
-    <button type="submit" class="btn btn-default">Volver</button>
-    </form>
+    <button type="submit" class="btn btn-block btn-primary">Guardar Cambios</button>
+</form>
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

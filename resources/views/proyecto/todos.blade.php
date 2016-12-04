@@ -71,4 +71,5 @@
 @if($proyectos instanceof \Illuminate\Pagination\LengthAwarePaginator )
 {!! $proyectos->links() !!}
 @endif
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

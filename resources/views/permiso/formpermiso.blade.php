@@ -35,6 +35,7 @@
             <label for="fecha_actualizacion">Fecha actualización:</label>
             <input type="date" class="form-control" id="fecha_actualizacion" name="fecha_actualizacion" value="{{--{{old('fecha_actualizacion')}}--}}">
         </div>
-        <button type="submit" class="btn btn-default">Crear permiso</button>
+        <button type="submit" class="btn btn-block btn-primary">Crear permiso</button>
     </form>
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

@@ -29,7 +29,7 @@ class GrupoController extends Controller
 
     public function create()
     {
-        return view('grupo.formgrupo');
+        return view('pasos.agruparse.pasouno');
     }
 
     public function store(Request $request)

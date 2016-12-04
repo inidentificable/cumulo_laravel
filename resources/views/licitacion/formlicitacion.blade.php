@@ -48,6 +48,7 @@
             <input type="date" class="form-control" id="fecha_desierta" name="fecha_desierta" value="{{--{{old('fecha_desierta')}}--}}">
         </div>
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <button type="submit" class="btn btn-default">Crear licitacion</button>
+        <button type="submit" class="btn btn-block btn-primary">Crear licitacion</button>
     </form>
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

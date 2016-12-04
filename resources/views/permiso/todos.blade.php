@@ -38,4 +38,5 @@
 @if($permisos instanceof \Illuminate\Pagination\LengthAwarePaginator )
 {!! $permisos->links() !!}
 @endif
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

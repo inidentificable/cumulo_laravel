@@ -108,6 +108,6 @@ class ProyectoController extends Controller
         $proyecto = Proyecto::find($request->id);
         $input = $request->all();
         $proyecto->fill($input)->save();
-        return redirect('/proyectos/'.$proyecto->id);
+        return redirect('home_emprendedor');
     }
 }

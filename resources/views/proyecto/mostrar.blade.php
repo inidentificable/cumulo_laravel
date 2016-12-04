@@ -112,7 +112,7 @@
     </div>
     <input type="hidden" name="id" value="{{$proyecto['id']}}" >
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-    <button type="button" class="btn btn-default" onclick="location.href ='{{url('home')}}'">Volver</button>
-    <button type="submit" class="btn btn-default">Guardar Cambios</button>
+    <button type="submit" class="btn btn-block btn-primary">Guardar Cambios</button>
 </form>
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

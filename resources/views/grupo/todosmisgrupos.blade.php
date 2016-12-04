@@ -38,4 +38,8 @@
         @endforeach
         </tbody>
     </table>
+@if($grupos instanceof \Illuminate\Pagination\LengthAwarePaginator )
+{!! $grupos->links() !!}
+@endif
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

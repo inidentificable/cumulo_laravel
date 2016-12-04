@@ -59,6 +59,6 @@
             <input type="text" class="form-control" id="clasificacion" name="clasificacion"
                    value="{{$empresa['clasificacion']}}" readonly>
         </div>
-        <button type="submit" class="btn btn-default">Volver</button>
+        <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
     </form>
 @endsection

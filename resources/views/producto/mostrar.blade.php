@@ -60,6 +60,7 @@
             <input type="number" class="form-control" id="precio_maximo" name="precio_maximo"
                    value="{{$producto['precio_maximo']}}" readonly>
         </div>
-        <button type="submit" class="btn btn-default">Volver</button>
+        <button type="submit" class="btn btn-block btn-primary">Guardar Cambios</button>
     </form>
+    <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

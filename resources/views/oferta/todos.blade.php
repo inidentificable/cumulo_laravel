@@ -35,4 +35,5 @@
 @if($ofertas instanceof \Illuminate\Pagination\LengthAwarePaginator )
 {!! $ofertas->links() !!}
 @endif
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

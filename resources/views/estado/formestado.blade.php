@@ -27,6 +27,7 @@
             <label for="aprovacion_vigente">Aprobación vigente</label>
             <input type="number" class="form-control" id="aprovacion_vigente" name="aprovacion_vigente" value="{{--{{old('aprovacion_vigente')}}--}}">
         </div>
-        <button type="submit" class="btn btn-default">Crear estado</button>
+        <button type="submit" class="btn btn-block btn-primary">Crear estado</button>
     </form>
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

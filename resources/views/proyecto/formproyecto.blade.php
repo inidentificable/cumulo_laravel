@@ -99,6 +99,7 @@
             <label for="porcentaje_maximo_participacion">Porcentaje máximo participacion:</label>
             <input type="number" step="0.01" class="form-control" id="porcentaje_maximo_participacion" name="porcentaje_maximo_participacion" value="{{--{{old('porcentaje_maximo_participacion')}}--}}">
         </div>
-        <button type="submit" class="btn btn-default">Crear proyecto</button>
+        <button type="submit" class="btn btn-block btn-primary">Crear proyecto</button>
     </form>
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

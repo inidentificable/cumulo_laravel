@@ -26,6 +26,7 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="hidden" name="fecha_creada" value="{{ Carbon\Carbon::today()->toDateString() }}">
         <input type="hidden" name="revisada" value="FALSE">
-        <button type="submit" class="btn btn-default">Crear actividad</button>
+        <button type="submit" class="btn btn-block btn-primary">Crear actividad</button>
     </form>
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

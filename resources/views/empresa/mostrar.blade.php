@@ -54,6 +54,7 @@
         <label for="clasificacion">Clasificación</label>
         <input type="text" class="form-control" id="clasificacion" name="clasificacion" value="{{$empresa['clasificacion']}}" readonly>
     </div>
-    <button type="submit" class="btn btn-default">Volver</button>
-    </form>
+    <button type="submit" class="btn btn-block btn-primary">Guardar Cambios</button>
+</form>
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

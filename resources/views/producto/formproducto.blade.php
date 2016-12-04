@@ -52,6 +52,7 @@
             <label for="precio_maximo">Precio máximo:</label>
             <input type="number" class="form-control" id="precio_maximo" name="precio_maximo" value="--}}{{--{{old('precio_maximo')}}--}}{{--">
         </div>--}}
-        <button type="submit" class="btn btn-default">Crear producto</button>
+        <button type="submit" class="btn btn-block btn-primary">Crear producto</button>
     </form>
+<a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
 @endsection

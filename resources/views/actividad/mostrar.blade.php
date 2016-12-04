@@ -46,6 +46,7 @@
         <label for="fecha_desierta">Fecha es desierta:</label>
         <input type="date" class="form-control" id="fecha_desierta" name="fecha_desierta" value="{{$licitacion['fecha_desierta']}}" readonly>
     </div>
-    <button type="submit" class="btn btn-default">Volver</button>
+    <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Volver</a>
+    <button type="submit" class="btn btn-block btn-primary">Guardar Cambios</button>
     </form>
 @endsection
