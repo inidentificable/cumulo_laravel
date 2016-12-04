@@ -46,6 +46,18 @@ class UserController extends Controller {
             return response('no encontrado', 404);
         }
     }
+    
+    public function listarMisGruposEmpresa() {
+        $user = User::find(1);
+        $grupos = $user->emprendedorParticipaGrupo()->paginate(10);
+        //dd($grupos);
+
+        if (!is_null($grupos)) {
+            return view('grupo.todos', ['grupos' => $grupos]);
+        } else {
+            return response('no encontrado', 404);
+        }
+    }
 
     public function listarMisProyectosEmprendedor() {
         $user = User::find(1);
@@ -71,6 +83,15 @@ class UserController extends Controller {
         $resultArray = json_decode(json_encode($proyectos), true);
         if (!is_null($proyectos)) {
             return view('homeemprendedor', ['proyectos' => $resultArray]);
+        } else {
+            return response('no encontrado', 404);
+        }
+    }
+    public function crearGrupoComoEmpresa() {
+        $user = User::find(1);
+        $empresas = $user->empresasPertenecenUsuario()->paginate(5);
+        if (!is_null($empresas)) {
+            return view('pasos.agruparse.pasodos', ['empresas' => $empresas]);
         } else {
             return response('no encontrado', 404);
         }

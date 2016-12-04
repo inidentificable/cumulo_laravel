@@ -125,6 +125,18 @@ Route::group(['middleware' => ['web']], function () {
     route::get('misgruposemprendedor', [
         'middleware' => 'auth',
         'uses' => 'UserController@listarMisGruposEmprendedor']);
+    route::get('misgruposempresa', [
+        'middleware' => 'auth',
+        'uses' => 'UserController@listarMisGruposEmpresa']);
+    route::get('grupos/empresas/crear', [
+        'middleware' => 'auth',
+        'uses' => 'UserController@crearGrupoComoEmpresa']);
+    route::get('grupos/empresas/crear/{empresaId}', [
+        'middleware' => 'auth',
+        'uses' => 'EmpresaController@crearGrupoDeEmpresa']);
+    route::post('grupos/empresas/crear/{empresaId}', [
+        'middleware' => 'auth',
+        'uses' => 'EmpresaController@guardarGrupoDeEmpresa']);
 
     //Mantenedor de licitaciones
     route::get('licitaciones', [

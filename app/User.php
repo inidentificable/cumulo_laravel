@@ -38,4 +38,9 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Grupo','grupo_user','user_id','grupo_id')->where('activo', '=', 1);
     }
+    
+    public function empresaParticipaGrupo()
+    {
+        return $this->belongsToMany('App\Grupo','grupo_user','user_id','grupo_id')->where('activo', '=', 1);
+    }
 }

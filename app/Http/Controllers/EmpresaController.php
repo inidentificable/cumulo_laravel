@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Empresa;
+use App\Grupo;
+use App\User;
 use App\Http\Requests;
 
 class EmpresaController extends Controller
@@ -66,6 +68,39 @@ class EmpresaController extends Controller
 
         Empresa::create($request->all());
         return redirect('/empresas');
+    }
+    
+    public function crearGrupoDeEmpresa($id)
+    {
+        $empresa = Empresa::find($id);
+        if (!is_null($empresa)){
+            return view('pasos.agruparse.pasotres', ['empresa' => $empresa]);
+        }else{
+            return response('no encontrado', 404);
+        }
+    }
+    
+    public function guardarGrupoDeEmpresa(Request $request, $id)
+    {
+        $usuario=User::find(1);
+        $empresa = Empresa::find($id);
+        $this->validate($request, [
+            'nombre' => 'required',
+            'descripcion' => 'required',
+            'fecha_creacion' => 'required',
+            'activo' => 'required',
+            'fecha_inactivo' => 'required',
+            'caracter_legal' => 'required',
+            'rol_personalidad_juridica' => 'required'
+        ]);
+        $grupo = Grupo::create($request->all());
+        $grupo;
+        $empresa->gruposPertenecenEmpresa()->attach($grupo->id);
+        if (!is_null($grupo)){
+            return view('pasos.agruparse.pasocuatro', ['grupo' => $grupo, 'usuario' => $usuario, 'empresa' => $empresa]);
+        }else{
+            return response('no encontrado', 404);
+        }
     }
     
     public function listarGruposEmpresa($empresaId)

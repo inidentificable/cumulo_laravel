@@ -7,7 +7,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand"><img height="20" alt="Brand" src="..\assets\imagenes\cumulo.jpg"></a>
+            <a class="navbar-brand">
+                <div id="sp-links">
+                    <img id="sp-cumulo" class="img-circle" height="100" alt="Brand" src="{{asset('assets\imagenes\cumulo.jpg')}}">
+                </div>
+            </a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -89,3 +93,8 @@
         </div>
     </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
